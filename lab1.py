@@ -22,6 +22,19 @@ try:
 except Exception as e:
     results.append(False)
 
+try:
+    assert script.status >= 200 and script.status < 400
+    results.append(True)
+except Exception as e:
+    results.append(False)
+
+try:
+    f = open(os.environ['USER_CODE_DIR'] + '/script.py', 'r').read()
+    assert 'print' in f
+    results.append(True)
+except Exception as e:
+    results.append(False)
+
 
 file = open(os.environ['UNIT_TEST_OUTPUT_FILE'], 'w')
 file.write(json.dumps(results))
