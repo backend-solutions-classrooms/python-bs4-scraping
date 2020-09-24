@@ -17,7 +17,7 @@ import script
 results = []
 
 try:
-    assert script.page_title == '<title>codedamn Web Scraper demo</title>'
+    assert script.page_title == 'codedamn Web Scraper demo'
     results.append(True)
 except Exception as e:
     results.append(False)
