@@ -17,7 +17,7 @@ import script
 results = []
 
 try:
-    assert len(script.txt > 100)
+    assert len(script.txt) > 100
     results.append(True)
 except Exception as e:
     results.append(False)
