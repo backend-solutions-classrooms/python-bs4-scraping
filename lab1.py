@@ -18,9 +18,9 @@ results = []
 
 try:
     assert len(script.txt > 100)
-    results.append(true)
+    results.append(True)
 except Exception as e:
-    results.append(false)
+    results.append(False)
 
 
 file = open(os.environ['UNIT_TEST_OUTPUT_FILE'], 'w')
