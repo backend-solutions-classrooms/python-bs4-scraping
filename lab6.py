@@ -24,14 +24,14 @@ except Exception as e:
     results.append(False)
 
 try:
-    assert script.all_links[7]['title']
-    assert script.all_links[7]['href']
+    assert type(script.all_links[7]['title']) is str
+    assert type(script.all_links[7]['href']) is str
     results.append(True)
 except Exception as e:
     results.append(False)
 
 try:
-    assert len(script.all_links[1]) == 37
+    assert len(script.all_links) == 37
     results.append(True)
 except Exception as e:
     results.append(False)
