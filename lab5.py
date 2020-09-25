@@ -37,15 +37,15 @@ except Exception as e:
     results.append(False)
 
 try:
-    assert script.top_items[0].get('title') == 'Asus ROG Strix G...'
-    assert script.top_items[0].get('review') == '4 reviews'
+    assert script.top_items[1].get('title') == 'Asus ROG Strix G...'
+    assert script.top_items[1].get('review') == '4 reviews'
     results.append(True)
 except Exception as e:
     results.append(False)
 
 try:
-    assert script.top_items[0].get('title') == 'Acer Aspire 3 A3...'
-    assert script.top_items[0].get('review') == '2 reviews'
+    assert script.top_items[2].get('title') == 'Acer Aspire 3 A3...'
+    assert script.top_items[2].get('review') == '2 reviews'
     results.append(True)
 except Exception as e:
     results.append(False)
