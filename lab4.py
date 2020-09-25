@@ -25,13 +25,12 @@ except Exception as e:
 
 try:
     assert script.all_h1_tags[0] == 'Test Sites'
-    assert script.all_h1_tags[1] == 'E-commerce training site'
     results.append(True)
 except Exception as e:
     results.append(False)
 
 try:
-    assert script.page_title.text == 'codedamn Web Scraper demo'
+    assert script.all_h1_tags[1] == 'E-commerce training site'
     results.append(True)
 except Exception as e:
     results.append(False)
