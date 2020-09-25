@@ -24,7 +24,7 @@ except Exception as e:
     results.append(False)
 
 try:
-    assert type(script.all_links[7]['title']) is str
+    assert type(script.all_links[7]['text']) is str
     assert type(script.all_links[7]['href']) is str
     results.append(True)
 except Exception as e:
@@ -37,9 +37,9 @@ except Exception as e:
     results.append(False)
 
 try:
-    assert '/webscraper-python-codedamn-classroom-website/documentation' in script.all_links[7].get(
-        'href')
-    assert script.all_links[7].get('title') == 'Documentation'
+    assert script.all_links[7].get(
+        'href') == '/webscraper-python-codedamn-classroom-website/documentation'
+    assert script.all_links[7].get('text') == 'Documentation'
     results.append(True)
 except Exception as e:
     results.append(False)
